@@ -1,0 +1,51 @@
+header{
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-right : 100px;
+    height : 68px;
+    display : flex;
+    justify-content: space-between;
+    @include mobile{
+        margin-left : 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        height : 47px;
+    }
+}
+
+nav{
+    display :flex ;
+    justify-content: flex-end;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    margin-top : 17px;
+    margin-bottom : 17px;
+    @include mobile{
+        font-size: 12px;
+    }
+}
+
+.nav__link{
+    margin-left: 57px;
+    text-decoration: none;
+    color : $primary-color;
+    &:hover{
+        text-decoration: underline;
+    }
+    @include mobile{
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+}
+
+.header__logo{
+    @include mobile{
+        height : 47px;
+        width : 145px;
+    }
+    @include small-mobile{
+        width : 130px;
+        height : 42.13px;
+    }
+}

@@ -1,0 +1,42 @@
+.error{
+    color : $primary-color;
+    text-align: center;
+    &__404{
+        font-weight: 700;
+        font-size: 288px;
+        line-height: 142.6%;
+        margin-top : 169px;
+        margin-bottom: 0px;
+        @include mobile{
+            font-size: 96px;
+            margin-top: 210px;
+        }
+    }
+    &__text{
+        font-weight: 500;
+        font-size: 36px;
+        height: 142.6%;
+        margin-top: 66px;
+        margin-bottom : 182px;
+        line-height: 142.6%;
+        @include mobile{
+            font-size : 18px;
+            margin-top : 16px; 
+            margin-bottom: 133px;
+        }
+    }
+    &__link{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 142.6%;
+        margin-bottom: 152px;
+        &__composant{
+            text-decoration: none;
+            color : $primary-color;
+        }
+        @include mobile{
+            font-size: 14px;
+            margin-bottom: 235px;
+        }
+    }
+}

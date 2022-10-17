@@ -1,21 +1,11 @@
-
 // MEDIA QUERIES 
-@mixin tablette-only {
-    @media all and (min-width: 769px) and (max-width : 991px){
+@mixin mobile {
+    @media all and (max-width : 425px){
         @content;
     }
 }
 
-// MEDIA QUERIES 
-@mixin computer-only {
-    @media all and (min-width : 992px){
-        @content;
-    }
-}
-
-
-// MEDIA QUERIES 
-@mixin litle-mobile {
+@mixin small-mobile{
     @media all and (max-width : 325px){
         @content;
     }
