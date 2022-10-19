@@ -1,10 +1,13 @@
 import React from 'react';
+import Banner from '../../components/Banner';
+
+
 
 function Home() {
   return (
-    <div className="Home">
-      <h1> Salut ! </h1>
-    </div>
+    <main>
+      <Banner link_image="image_Home.png"  text="Chez vous, partout et ailleurs"/>
+    </main>
   );
 }
 
