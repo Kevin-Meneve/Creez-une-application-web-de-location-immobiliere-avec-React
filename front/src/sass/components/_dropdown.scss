@@ -1,0 +1,9 @@
+.dropdown{
+    margin-left: 200px;
+    margin-right: 200px;
+
+    @include mobile{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

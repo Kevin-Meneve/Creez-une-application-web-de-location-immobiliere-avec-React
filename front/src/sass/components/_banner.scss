@@ -1,22 +1,45 @@
 .banner{
+    height: 223px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 43px;
+    margin-top: 60px;
+    @include mobile{
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 111px;
+        margin-top : 20px;
+    }
     &__image{
-        height: 223px;
-        margin-left: 100px;
-        margin-right: 100px;
-        object-fit: cover;
+        filter : brightness(85%);
         border-radius: 25px;
-        margin-bottom: 43px;
-        margin-top: 60px;
-        filter: brightness(85%);
+        height: 223px;
+        width: 100%;
+        object-fit: cover;
+        @include mobile{
+            height: 111px;
+        }
     }
     &__text{
-        position: absolute;
-        z-index: 1;
+        position : relative;
+        bottom : 80%;
         color : white;
         font-weight: 500;
         font-size: 48px;
         line-height: 142.6%;
-        top : 210px;
-        left : 410px;
+        display : flex;
+        justify-content: center;
+        @include tablette{
+            font-size: 35px;
+            bottom : 75%;
+        }
+        @include mobile {
+            justify-content: flex-start;
+            font-size: 24px;
+            margin-left: 16px;
+            width: 226px;
+            line-height: 100%;
+            bottom : 90%;
+        }
     }
 }
