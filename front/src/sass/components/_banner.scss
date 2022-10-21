@@ -1,0 +1,22 @@
+.banner{
+    &__image{
+        height: 223px;
+        margin-left: 100px;
+        margin-right: 100px;
+        object-fit: cover;
+        border-radius: 25px;
+        margin-bottom: 43px;
+        margin-top: 60px;
+        filter: brightness(85%);
+    }
+    &__text{
+        position: absolute;
+        z-index: 1;
+        color : white;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 142.6%;
+        top : 210px;
+        left : 410px;
+    }
+}

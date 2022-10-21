@@ -1,11 +1,12 @@
 import React from 'react';
 import Banner from '../../components/Banner';
 import DropText from '../../components/DropText';
+import imageImport from '../../assets/image_About.png';
 
 function About() {
     return (
     <main>
-      <Banner link_image="image_About.png"  text=""/>
+      <Banner link_image={imageImport} text=""/>
       <section>
         <DropText title="Fiabilité" text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />
         <DropText title="Respect" text="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />
