@@ -4,11 +4,12 @@
 @import './base/base';
 @import './base/typography';
 
+@import 'components/banner';
+@import 'components/dropdown';
+
 @import './layout/header';
 @import './layout/footer';
 
 @import 'pages/error';
 @import 'pages/about';
 
-@import 'components/banner';
-@import 'components/dropdown';

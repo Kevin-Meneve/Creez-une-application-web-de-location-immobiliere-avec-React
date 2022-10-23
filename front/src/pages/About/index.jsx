@@ -6,7 +6,7 @@ import imageImport from '../../assets/image_About.png';
 function About() {
     return (
     <main>
-      <Banner link_image={imageImport} text=""/>
+      <Banner link_image={imageImport} text="" pageName="about"/>
       <section>
         <Dropdown title="Fiabilité" text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />
         <Dropdown title="Respect" text="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />

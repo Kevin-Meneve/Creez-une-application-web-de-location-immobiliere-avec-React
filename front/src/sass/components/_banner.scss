@@ -13,12 +13,9 @@
     &__image{
         filter : brightness(85%);
         border-radius: 25px;
-        height: 223px;
+        height: 100%;
         width: 100%;
         object-fit: cover;
-        @include mobile{
-            height: 111px;
-        }
     }
     &__text{
         position : relative;

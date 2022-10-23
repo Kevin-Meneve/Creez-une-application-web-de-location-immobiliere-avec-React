@@ -1,9 +1,65 @@
 .dropdown{
     margin-left: 200px;
     margin-right: 200px;
+    margin-bottom: 30px;
 
     @include mobile{
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 25px;
+    }
+
+    &__header{
+        height: 47px;
+        background-color: $primary-color;
+        border-radius: 5px;
+        display : flex;
+        justify-content: space-between;
+
+        @include mobile {
+            height : 30px
+        }
+        &__title{
+            color : white;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 142.6%;
+            padding-left: 18px;
+            padding-top: 6px;
+            padding-bottom: 7px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            @include mobile{
+                font-size: 13px;
+                padding-left : 11px;
+                padding-top: 5.5px;
+                padding-bottom: 5.5px;
+            }
+        }
+        &__icon{
+            color : white;
+        }
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 142.6%;
+        color : $primary-color;
+        background-color: $color-background-dropdown;
+        padding-top: 36px;
+        padding-right: 27px;
+        padding-bottom: 19px;
+        padding-left: 18px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        @include mobile{
+            padding-top : 17px;
+            padding-left: 11px;
+            padding-right: 7px;
+            padding-bottom: 20px;
+            font-size: 12px;
+        }
     }
 }
