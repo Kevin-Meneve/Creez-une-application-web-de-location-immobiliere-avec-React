@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react'
 
 
-
 function Dropdown({title, text}) {
     const [isOpen, setIsOpen] = useState(false);
 

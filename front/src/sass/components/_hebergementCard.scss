@@ -1,0 +1,24 @@
+.card{
+    height: 340px;
+    width: 340px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-size: cover;
+    text-decoration: none;
+    @include mobile{
+        height : 255px;
+        margin-top : 20px
+    }
+    &__title{
+        text-decoration: none;
+        margin-left: 20px;
+        color : white;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 142.6%;
+        margin-top : 280px;
+        @include mobile{
+            margin-top: 200px;
+        }
+    }
+}

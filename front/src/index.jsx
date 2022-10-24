@@ -6,6 +6,7 @@ import About from './pages/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Error from './pages/Error';
+import Hebergement from './pages/Hebergement'
 import './sass/style.scss';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -17,6 +18,7 @@ root.render(
         <Route exact path="/" element = {<Home />}/>
         <Route path="/About" element = {<About />}/>
         <Route path="/*" element = {<Error />}/>
+        <Route path="/Hebergement/:id" element ={<Hebergement />}/>
       </Routes>
       <Footer />
     </Router>
