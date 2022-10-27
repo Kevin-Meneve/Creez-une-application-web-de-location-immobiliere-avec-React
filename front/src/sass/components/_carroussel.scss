@@ -8,6 +8,7 @@
     @include mobile{
         margin-right: 20px;
         margin-left: 20px;
+        height: 255px;
     }
     &__container{
         display:flex;
@@ -20,6 +21,9 @@
             width: 100%;
             height: 415px;
             object-fit: cover;
+            @include mobile{
+                height : 255px;
+            }
         }
     }
     &__controle{

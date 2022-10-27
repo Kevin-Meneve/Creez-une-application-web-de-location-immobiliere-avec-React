@@ -1,12 +1,32 @@
 import React from 'react';
+import { useState, useLayoutEffect } from 'react';
 import Banner from '../../components/Banner';
 import Dropdown from '../../components/Dropdown';
-import imageImport from '../../assets/image_About.png';
+import imageLaptopImport from '../../assets/image_About_laptop.png';
+import imageMobileImport from '../../assets/image_About_mobile.png';
+
+
 
 function About() {
+  
+  const [widthFromWindow , setWidthFromWindow] = useState(window.innerWidth);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setWidthFromWindow([window.innerWidth]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
     return (
     <main>
-      <Banner link_image={imageImport} text="" pageName="about"/>
+      {
+        widthFromWindow > 455 ? 
+          <Banner link_image={imageLaptopImport} text="" pageName="about"/>
+        :
+          <Banner link_image={imageMobileImport} text="" pageName="about"/>
+      }
       <section className='about'>
         <Dropdown title="Fiabilité" text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />
         <Dropdown title="Respect" text="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />
@@ -17,5 +37,5 @@ function About() {
     );
   }
   
-  export default About;
+export default About;
   

@@ -22,11 +22,15 @@ function Dropdown({title, text}) {
                     <img className='dropdown__header__icon--close dropdown__header__icon' src={VectorBottom} alt="Onglet ouvrable"/>
                 }
             </div>
-            <div ref={content} className='dropdown__textContainer'>
+            <div>
             {isOpen ?
-                <p className='dropdown__textContainer__text' style={{transform: `translateY(-${textSize()}px)`}}>{text}</p>
+                <div ref={content} className='dropdown__textContainer dropdown__textContainer--open'>
+                <div className='dropdown__textContainer__text' >{text}</div>
+                </div>
             :
-                <p className='dropdown__textContainer__text'>{text}</p>
+                <div ref={content} className='dropdown__textContainer--close dropdown__textContainer'>
+                <div className='dropdown__textContainer__text' >{text}</div>
+                </div>
             }   
             </div>
         </article>

@@ -5,7 +5,7 @@ import Tag from "./Tag"
 
 function InfoHebergement(props) {
     const textEquipement = props.hebergement.equipments.map((equipement, i) =>
-        <p className="equipement" key={i}>{equipement}</p> 
+        <div className="equipement" key={i}>{equipement}</div> 
         )
 
 
