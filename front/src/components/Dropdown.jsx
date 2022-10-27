@@ -1,16 +1,11 @@
 import React from 'react';
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import VectorBottom from '../assets/VectorBottom.png'
 
 
 function Dropdown({title, text}) {
     const [isOpen, setIsOpen] = useState(false);
-    const content = useRef(null);
 
-    const textSize = () => {
-        const textLenght = content.current.scrollHeight;
-        return textLenght;
-    }
 
     return (
         <article className='dropdown'>
@@ -24,11 +19,11 @@ function Dropdown({title, text}) {
             </div>
             <div>
             {isOpen ?
-                <div ref={content} className='dropdown__textContainer dropdown__textContainer--open'>
+                <div className='dropdown__textContainer dropdown__textContainer--open'>
                 <div className='dropdown__textContainer__text' >{text}</div>
                 </div>
             :
-                <div ref={content} className='dropdown__textContainer--close dropdown__textContainer'>
+                <div className='dropdown__textContainer--close dropdown__textContainer'>
                 <div className='dropdown__textContainer__text' >{text}</div>
                 </div>
             }   
