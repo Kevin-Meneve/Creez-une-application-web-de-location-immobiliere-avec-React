@@ -3,18 +3,31 @@
     margin-right: 100px;
     margin-left: 100px;
     color : $primary-color;
+    @include mobile{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
     &__general{
         display: flex;
         justify-content: flex-start;
         margin-bottom: 25px;
+        @include mobile{
+            flex-direction: column;
+        }
         &__left{
             width : 60%;
+            @include mobile{
+                width: 100%;
+            }
             &__title{
                 font-weight: 500;
                 font-size: 36px;
                 line-height: 142.6%;
                 margin-bottom: 0px;
                 margin-top: 0px;
+                @include mobile {
+                    font-size: 18px;
+                }
             }
             &__localisation{
                 font-weight: 500;
@@ -22,10 +35,20 @@
                 line-height: 142.6%;
                 margin-top: 0px;
                 margin-bottom: 20px;
+                @include mobile{
+                    font-size: 14px;
+                }
             }
         }
         &__right{
             width: 40%;
+            @include mobile{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                margin-top: 10px;
+            }
             &__profile{
                 display: flex;
                 justify-content: flex-end;
@@ -37,6 +60,9 @@
                     font-size: 18px;
                     line-height: 142.6%;
                     margin-right: 10px;
+                    @include mobile{
+                        font-size: 12px;
+                    }
                     &__name{
                         margin-top : 0px;
                         margin-bottom : 0px;
@@ -46,6 +72,11 @@
                     width: 64px;
                     height: 64px;
                     border-radius: 50px;
+                    @include mobile{
+                        margin-top: 15px;
+                        height : 32px;
+                        width : 32px
+                    }
                 }
             }
         }
@@ -53,6 +84,10 @@
     &__dropdown{
         display :flex;
         justify-content: space-between;
+        @include mobile {
+            flex-direction : column ;
+            justify-content : flex-start;
+        }
         &__element{
             width: 100%;
             &--left{

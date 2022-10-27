@@ -1,8 +1,12 @@
 .starContainer{
     display: flex;
     justify-content: flex-end;
-    margin-top: 25px;
+    margin-top: 20px;
     &__star{
         margin-left: 10px;
+        @include mobile{
+            height: 15px;
+            width: 15px;
+        }
     }
 }
