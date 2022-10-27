@@ -2,6 +2,7 @@
     margin-left: 200px;
     margin-right: 200px;
     margin-bottom: 30px;
+    overflow: hidden;
 
     @include mobile{
         margin-left: 20px;
@@ -38,28 +39,41 @@
         }
         &__icon{
             color : white;
+            height: 18px;
+            object-fit: cover;
+            margin-right: 20px;
+            margin-top: 15px;
+            transition: transform 0.5s ease-in-out;
+            &--close{
+                transform: rotate(-180deg);
+            }
         }
     }
-    &__text{
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 142.6%;
-        color : $primary-color;
-        background-color: $color-background-dropdown;
-        padding-top: 36px;
-        padding-right: 27px;
-        padding-bottom: 19px;
-        padding-left: 18px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        @include mobile{
-            padding-top : 17px;
-            padding-left: 11px;
-            padding-right: 7px;
-            padding-bottom: 20px;
-            font-size: 12px;
+    &__textContainer{
+        position: relative;
+        z-index: -100;
+        &__text{
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 142.6%;
+            color : $primary-color;
+            background-color: $color-background-dropdown;
+            padding-top: 36px;
+            padding-right: 27px;
+            padding-bottom: 19px;
+            padding-left: 18px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            transition: transform 0.5s ease-in-out;
+            @include mobile{
+                padding-top : 17px;
+                padding-left: 11px;
+                padding-right: 7px;
+                padding-bottom: 20px;
+                font-size: 12px;
+            }    
         }
     }
 }

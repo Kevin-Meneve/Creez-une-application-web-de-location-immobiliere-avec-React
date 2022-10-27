@@ -1,0 +1,18 @@
+.tagContainer{
+    display: flex;
+    justify-content: flex-start;
+    &__tag{
+        height: 20px;
+        margin-right: 10px;
+        color : white;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 142.6%;
+        border-radius: 10px;
+        background-color: $primary-color;
+        padding-left : 20px;
+        padding-right: 20px;
+        padding-top : 3px;
+        padding-bottom: 3px;
+    }
+}

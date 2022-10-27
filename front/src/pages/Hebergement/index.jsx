@@ -37,7 +37,7 @@ function Hebergement() {
           isFound ?
             <main>
               <Carroussel pictures = {hebergement.pictures}/>
-              <InfoHebergement />
+              <InfoHebergement hebergement={hebergement}/>
             </main>
           :
             <Navigate to="/404" />
