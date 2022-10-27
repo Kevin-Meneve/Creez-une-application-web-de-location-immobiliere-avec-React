@@ -50,4 +50,19 @@
             }
         }
     }
+    &__dropdown{
+        display :flex;
+        justify-content: space-between;
+        &__element{
+            width: 100%;
+            &--left{
+                margin-right: 75px;
+            }
+        }
+    }
+}
+
+.equipement{
+    margin-top: 0px;
+    margin-bottom: 0px;
 }

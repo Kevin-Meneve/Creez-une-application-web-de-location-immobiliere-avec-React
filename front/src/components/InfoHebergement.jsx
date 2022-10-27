@@ -4,6 +4,11 @@ import Star from "./Star"
 import Tag from "./Tag"
 
 function InfoHebergement(props) {
+    const textEquipement = props.hebergement.equipments.map((equipement, i) =>
+        <p className="equipement" key={i}>{equipement}</p> 
+        )
+
+
     return (
         <section className="info">
             <div className="info__general">
@@ -20,12 +25,12 @@ function InfoHebergement(props) {
                         </div>
                         <img className="info__general__right__profile__picture" src={props.hebergement.host.picture} alt="Profil"/>
                     </div>
-                    <Star note={props.hebergement}/>
+                    <Star note={props.hebergement.rating}/>
                 </div>
             </div>
-            <div>
-                <Dropdown title="Description" text={props.hebergement.description} />
-                <Dropdown title="Équipement" text={props.hebergement.equipments} />
+            <div className="info__dropdown">
+                <div className="info__dropdown__element info__dropdown__element--left"><Dropdown title="Description" text={props.hebergement.description} /></div>
+                <div className="info__dropdown__element"><Dropdown title="Équipement" text={textEquipement} /></div>
             </div>
         </section>
     )

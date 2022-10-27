@@ -5,6 +5,10 @@
     height : 415px;
     overflow: hidden;
     position:relative;
+    @include mobile{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
     &__container{
         display:flex;
         justify-content: flex-start;
@@ -28,6 +32,12 @@
         align-items: center;
         padding: 0 10px;
         margin-left : 5px;
+        &__vector{
+            @include mobile{
+                height : 20px;
+                object-fit: cover;
+            }
+        }
     } 
     &__number {
         position: absolute;
@@ -36,5 +46,8 @@
         bottom: 10px;
         width: 100%;
         font-weight: bold;
+        @include mobile{
+            display : none;
+        }
     }
 }

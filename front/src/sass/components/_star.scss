@@ -1,0 +1,8 @@
+.starContainer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    &__star{
+        margin-left: 10px;
+    }
+}

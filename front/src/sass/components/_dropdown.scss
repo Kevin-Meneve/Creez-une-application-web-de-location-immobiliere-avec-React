@@ -1,12 +1,8 @@
 .dropdown{
-    margin-left: 200px;
-    margin-right: 200px;
     margin-bottom: 30px;
     overflow: hidden;
 
     @include mobile{
-        margin-left: 20px;
-        margin-right: 20px;
         margin-bottom: 25px;
     }
 
@@ -46,6 +42,11 @@
             transition: transform 0.5s ease-in-out;
             &--close{
                 transform: rotate(-180deg);
+            }
+            @include mobile{
+                height: 10px;
+                margin-right: 10px;
+                margin-top: 10px;
             }
         }
     }
